@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Radium, { StyleRoot } from 'radium';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 
@@ -59,7 +58,6 @@ class App extends Component {
         }*/
 
         return (
-            <StyleRoot>
               <div className="App">
                 <Cockpit 
                     persons={this.state.persons}
@@ -67,9 +65,8 @@ class App extends Component {
                     clicked={this.togglePersonsHandler} />
                 {persons}
               </div>
-            </StyleRoot>
         );
     }
 }
 
-export default Radium(App);
+export default App;

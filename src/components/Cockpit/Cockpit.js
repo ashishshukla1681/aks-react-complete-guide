@@ -1,6 +1,5 @@
 import React from 'react';
 import './Cockpit.css';
-import Radium from 'radium';
 
 const cockpit = (props) => {
     const style = {
@@ -10,19 +9,13 @@ const cockpit = (props) => {
             border: '1px solid blue',
             padding: '8px',
             cursor: 'pointer',
-            ':hover': {
-                backgroundColor: 'lightgreen',
-                color: 'black'
-            }
+            
         }
     const classes = [];
 
     if(props.showPersons){
         style.backgroundColor = 'red';
-            style[':hover'] = {
-                backgroundColor: 'salmon',
-                color: 'black'
-            }
+            
     }
     
     if(props.persons.length <= 2) {
@@ -43,4 +36,4 @@ const cockpit = (props) => {
     );
 };
 
-export default Radium(cockpit);
+export default cockpit;
