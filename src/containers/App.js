@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 
@@ -13,7 +13,6 @@ class App extends Component {
     }
 
     nameChangedHandler = (event, id) => {
-        //console.log('Was clicked!');
         const personIndex = this.state.persons.findIndex(p => {
             return p.id === id;
         })
@@ -44,21 +43,16 @@ class App extends Component {
 
     render() {
         let persons = null;
-        
+
         if(this.state.showPersons) {
             persons = <Persons 
                         persons={this.state.persons}
                         clicked={this.deletePersonsHandler}
                         changed={this.nameChangedHandler} />;
         }
-        
-        /*const rnd = Math.random();
-        if(rnd > 0.7) {
-            throw new Error('Something went wrong!!');
-        }*/
 
         return (
-              <div className="App">
+              <div className={classes.App}>
                 <Cockpit 
                     persons={this.state.persons}
                     showPersons={this.state.showPersons}

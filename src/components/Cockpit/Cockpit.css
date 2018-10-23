@@ -4,3 +4,24 @@
 .bold {
     font-weight: bold;
 }
+.Cockpit button {
+    background-color: green;
+    color: white;
+    font: inherit;
+    border: 1px solid blue;
+    padding: 8px;
+    cursor: pointer;
+}
+.Cockpit button:hover {
+	background-color: greenyellow;
+    color: black;
+}
+.Cockpit button.red {
+    background-color: red;
+}
+.Cockpit button.green {
+    background-color: green;
+}
+.Cockpit button.red:hover {
+    background-color: salmon;
+}
